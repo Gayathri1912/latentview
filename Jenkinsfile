@@ -10,7 +10,8 @@ node {
 	stage('Build image') {
 		app = docker.build("testproject")
 	}
-
+ 
+	
 	stage('Deploy') {
 		sh ("docker run -d -p 8084:80 testproject")
 	}
